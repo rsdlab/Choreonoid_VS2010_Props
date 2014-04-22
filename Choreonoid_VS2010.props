@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<Link>
+			<AdditionalLibraryDirectories>$(BOOST_ROOT)\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalDependencies>libboost_signals-vc100-mt-gd-1_50.lib;%(AdditionalDependencies)</AdditionalDependencies>
+		</Link>
+		<ClCompile>
+			<AdditionalIncludeDirectories>$(BOOST_ROOT);c:\choreonoid-1.4.0\include;c:\choreonoid-1.4.0;C:\Qt\4.8.5\include\QtGui;c:\Qt\4.8.5\include\QtCore;c:\Qt\4.8.5\include;%(IncludePath)</AdditionalIncludeDirectories>
+		</ClCompile>
+	</ItemDefinitionGroup>
+	<ItemGroup />
+	
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<Link>
+			<AdditionalLibraryDirectories>$(BOOST_ROOT)\libs;C:\choreonoid-1.4.0\build\lib\Release;C:\Qt\4.8.5\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>		
+			<AdditionalDependencies>libboost_signals-vc100-mt-1_50.lib;CnoidBase.lib;QtCore4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+		</Link>
+		<ClCompile>
+			<AdditionalIncludeDirectories>$(BOOST_ROOT);c:\choreonoid-1.4.0\include;c:\choreonoid-1.4.0;C:\Qt\4.8.5\include\QtGui;c:\Qt\4.8.5\include\QtCore;c:\Qt\4.8.5\include;%(IncludePath)</AdditionalIncludeDirectories>
+		</ClCompile>		
+	</ItemDefinitionGroup>
+	<ItemGroup />
+</Project>
